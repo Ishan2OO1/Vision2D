@@ -1,4 +1,4 @@
-# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System
+# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System
 
 
 
@@ -12,65 +12,61 @@ A C++/OpenCV pipeline for real-time 2D object recognition using classical comput
 
 - Custom thresholding, morphological filtering, connected components analysis, and feature extraction
 
-- Real-time camera-based object detection and classification
+- Real-time camera-based object detection and classification  
 
-- ONNX ResNet18 embedding classifier for robust recognition## FeaturesA C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based deep learning embeddings.A C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based embeddings. The GitHub edition of this project keeps only the source, models, and assets required to build and run the applications.
+- ONNX ResNet18 embedding classifier for robust recognition## FeaturesA C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based deep learning embeddings.
 
 - Modular pipeline architecture with individual task executables
 
-- Custom thresholding, morphological filtering, connected components analysis, and feature extraction
+
 
 ## Requirements
 
-- Real-time camera-based object detection and classification
+- Custom thresholding, morphological filtering, connected components analysis, and feature extraction
 
 ### Build Tools
 
-- ONNX ResNet18 embedding classifier for robust recognition
+- Windows 10/11 (or another OS with C++17 compiler)- Real-time camera-based object detection and classification
 
-- Windows 10/11 (or another OS with C++17 compiler)
+- CMake ≥ 3.19
 
-- CMake ≥ 3.19- Modular pipeline architecture with individual task executables## Features## Features
-
-- Visual Studio 2019/2022 or MSVC Build Tools
+- Visual Studio 2019/2022 or MSVC Build Tools- ONNX ResNet18 embedding classifier for robust recognition## FeaturesA C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based deep learning embeddings.A C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based embeddings. The GitHub edition of this project keeps only the source, models, and assets required to build and run the applications.
 
 
 
-### Required Downloads
-
-## Requirements- Custom thresholding, morphological filtering, connected components analysis, and feature extraction- Custom thresholding, morphology, connected components, feature extraction, and enhanced classification stages
+### Required Downloads- Modular pipeline architecture with individual task executables
 
 Before building, download and place these dependencies:
 
-
+- Custom thresholding, morphological filtering, connected components analysis, and feature extraction
 
 1. **OpenCV 4.12** - [Download from opencv.org](https://opencv.org/releases/)
 
-   - Extract to `opencv/` folder in project root### Build Tools- Real-time camera-based object detection and classification- Real-time camera pipeline plus offline tooling for feature inspection
+   - Extract to `opencv/` folder in project root## Requirements
 
 
 
-2. **ONNX Runtime 1.16+** - [Download from GitHub](https://github.com/microsoft/onnxruntime/releases)- Windows 10/11 (or another OS with C++17 compiler)
+2. **ONNX Runtime 1.16+** - [Download from GitHub](https://github.com/microsoft/onnxruntime/releases)  - Real-time camera-based object detection and classification
 
    - Extract to `onnxruntime_nupkg/` folder
 
-- CMake ≥ 3.19- ONNX ResNet18 embedding classifier for robust recognition- ONNX embedding classifier with pre-trained `resnet18-v2-7.onnx`
+### Build Tools
 
 3. **ResNet18 ONNX Model** - [Download resnet18-v2-7.onnx](https://github.com/onnx/models/tree/main/vision/classification/resnet)
 
-   - Place in project root- Visual Studio 2019/2022 or MSVC Build Tools
+   - Place in project root- ONNX ResNet18 embedding classifier for robust recognition
 
 
 
-## Quick Start- Modular pipeline architecture with individual task executables- Windows build scripts (Visual Studio + CMake) and cross-platform CMake project files
+## Quick Start- Windows 10/11 (or another OS with C++17 compiler)
 
 
 
-```powershell### Required Downloads
+```powershell- CMake ≥ 3.19- Modular pipeline architecture with individual task executables## Features## Features
 
 # From the repository root
 
-.\build_project.batBefore building, download and place these dependencies:
+.\build_project.bat- Visual Studio 2019/2022 or MSVC Build Tools
 
 # Executables will be placed in bin\Release\
 
@@ -78,19 +74,115 @@ Before building, download and place these dependencies:
 
 
 
-Manual CMake build:1. **OpenCV 4.12** - [Download from opencv.org](https://opencv.org/releases/)## Prerequisites## Requirements
+Manual CMake build:### Required Downloads
+
+```powershell
+
+mkdir build## Requirements- Custom thresholding, morphological filtering, connected components analysis, and feature extraction- Custom thresholding, morphology, connected components, feature extraction, and enhanced classification stages
+
+cd build
+
+cmake -G "Visual Studio 17 2022" -A x64 ..Before building, download and place these dependencies:
+
+cmake --build . --config Release
+
+```
 
 
 
-```powershell   - Extract to `opencv/` folder in project root
+## Running the Applications1. **OpenCV 4.12** - [Download from opencv.org](https://opencv.org/releases/)
 
-mkdir build
 
-cd build- Windows 10/11 (tested) or another OS with a C++17 compiler
 
-cmake -G "Visual Studio 17 2022" -A x64 ..
+- `bin\Release\realtime_detection.exe` – Real-time camera detection with classification   - Extract to `opencv/` folder in project root### Build Tools- Real-time camera-based object detection and classification- Real-time camera pipeline plus offline tooling for feature inspection
 
-cmake --build . --config Release2. **ONNX Runtime 1.16+** - [Download from GitHub](https://github.com/microsoft/onnxruntime/releases)
+- `bin\Release\camera_selector.exe` – Select and test available cameras  
+
+- `bin\Release\task3.exe` through `task9.exe` – Individual pipeline stage demonstrations
+
+
+
+Press **ESC** to exit any application. See on-screen help for task-specific controls.2. **ONNX Runtime 1.16+** - [Download from GitHub](https://github.com/microsoft/onnxruntime/releases)- Windows 10/11 (or another OS with C++17 compiler)
+
+
+
+## Project Structure   - Extract to `onnxruntime_nupkg/` folder
+
+
+
+```- CMake ≥ 3.19- ONNX ResNet18 embedding classifier for robust recognition- ONNX embedding classifier with pre-trained `resnet18-v2-7.onnx`
+
+Vision2D/
+
+├── src/                          # All source code3. **ResNet18 ONNX Model** - [Download resnet18-v2-7.onnx](https://github.com/onnx/models/tree/main/vision/classification/resnet)
+
+│   ├── custom_threshold.cpp/.h   # Thresholding algorithms
+
+│   ├── morphological_filter.cpp/.h   - Place in project root- Visual Studio 2019/2022 or MSVC Build Tools
+
+│   ├── connected_components.cpp/.h  
+
+│   ├── embedding_classifier.cpp/.h
+
+│   ├── enhanced_classifier.cpp/.h
+
+│   └── task*.cpp                 # Individual task executables## Quick Start- Modular pipeline architecture with individual task executables- Windows build scripts (Visual Studio + CMake) and cross-platform CMake project files
+
+├── CMakeLists.txt                # Build configuration
+
+├── build_project.bat             # Windows build helper
+
+├── .gitignore                    # Excludes large dependencies
+
+└── README.md                     # This file```powershell### Required Downloads
+
+
+
+# Not tracked (download separately):# From the repository root
+
+├── opencv/                       # OpenCV 4.12 runtime
+
+├── onnxruntime_nupkg/            # ONNX Runtime  .\build_project.batBefore building, download and place these dependencies:
+
+└── resnet18-v2-7.onnx            # Pre-trained model
+
+```# Executables will be placed in bin\Release\
+
+
+
+## Sample Results```
+
+
+
+<div align="center">
+
+
+
+![Task 6 Compass Classification](docs/images/task6_compass.jpg)Manual CMake build:1. **OpenCV 4.12** - [Download from opencv.org](https://opencv.org/releases/)## Prerequisites## Requirements
+
+
+
+*Compass detected with 99% confidence using enhanced embedding classifier*
+
+
+
+![Task 6 Stapler Classification](docs/images/task6_stapler.jpg)```powershell   - Extract to `opencv/` folder in project root
+
+
+
+*Stapler detected with 86% confidence*mkdir build
+
+
+
+</div>cd build- Windows 10/11 (tested) or another OS with a C++17 compiler
+
+
+
+## Licensecmake -G "Visual Studio 17 2022" -A x64 ..
+
+
+
+Third-party components (OpenCV, ONNX Runtime) retain their respective licenses. Project source code is provided as-is for educational purposes.cmake --build . --config Release2. **ONNX Runtime 1.16+** - [Download from GitHub](https://github.com/microsoft/onnxruntime/releases)
 
 ```
 
