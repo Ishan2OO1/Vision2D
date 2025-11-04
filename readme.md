@@ -89,10 +89,12 @@ Generated folders such as `build/`, `bin/`, and `results/` are excluded via `.gi
 
 ## Sample Results
 
-![Task 6 - Compass Detection](docs/images/task6_compass.jpg)
+![Task 6 - Compass Detection](docs/images/task6_compass.jpg
+
 *Compass detected with 99% confidence using enhanced embedding classifier*
 
 ![Task 6 - Stapler Detection](docs/images/task6_stapler.jpg)
+
 *Stapler detected with 86% confidence*
 
 ## Tips
