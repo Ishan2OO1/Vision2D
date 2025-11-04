@@ -1,4 +1,4 @@
-# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System# 2D Object Recognition System
+# 2D Object Recognition System
 
 
 
@@ -6,8 +6,7 @@ A C++/OpenCV pipeline for real-time 2D object recognition using classical comput
 
 
 
-## FeaturesA C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based deep learning embeddings.
-
+## Features: C++/OpenCV pipeline for real-time 2D object recognition using classical computer vision and ONNX-based deep learning embeddings.
 
 
 - Custom thresholding, morphological filtering, connected components analysis, and feature extraction
@@ -71,7 +70,6 @@ Before building, download and place these dependencies:
 # Executables will be placed in bin\Release\
 
 ```
-
 
 
 Manual CMake build:### Required Downloads
