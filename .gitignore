@@ -1,0 +1,33 @@
+# Build artifacts
+build/
+bin/
+CMakeFiles/
+*.cmake
+*.sln
+*.vcxproj*
+x64/
+**/*.pdb
+**/*.ilk
+**/*.obj
+**/*.log
+
+# Generated outputs
+results/
+backup_images/
+train/
+
+# Large downloadable dependencies (users should download separately)
+opencv/
+onnxruntime_nupkg/
+*.onnx
+
+# IDE and system files
+.vs/
+*.user
+*.opendb
+ipch/
+Thumbs.db
+.DS_Store
+
+# Submission artifacts
+submission/
